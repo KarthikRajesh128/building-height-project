@@ -106,11 +106,15 @@
     pre{background:rgba(255,255,255,0.08);padding:12px;border-radius:8px;color:#fff; font-size:20px}
     .muted{color:var(--muted)}
 
-    .always-images{
-      max-width:100%;
-      height:auto;
-      margin-top:20px;
-      border-radius:10px;
+    /* Image styling */
+    .always-images {
+      display: block;
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
     @keyframes fadeIn{
@@ -120,36 +124,14 @@
 
     /* Mobile Responsive Adjustments */
     @media (max-width: 768px) {
-      h1 {
-        font-size: 36px;
-      }
-      .subtitle {
-        font-size: 20px;
-      }
-      .authors {
-        font-size: 16px;
-      }
-      nav {
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px;
-      }
-      nav button {
-        font-size: 14px;
-        padding: 8px 10px;
-      }
-      .page {
-        padding: 20px;
-        font-size: 18px;
-      }
-      h2 {
-        font-size: 24px;
-      }
-      .always-images {
-        width: 100%;
-        max-width: 100%;
-        margin: 10px 0;
-      }
+      h1 { font-size: 36px; }
+      .subtitle { font-size: 20px; }
+      .authors { font-size: 16px; }
+      nav { gap: 10px; padding: 10px; }
+      nav button { font-size: 14px; padding: 8px 10px; }
+      .page { padding: 20px; font-size: 18px; }
+      h2 { font-size: 24px; }
+      .always-images { margin: 10px auto; }
     }
   </style>
 </head>
@@ -234,11 +216,11 @@
       <p>Merges traditional trigonometry with modern technology. Portable, low-cost, and practical compared to industrial survey equipment. Integrates tools into a compact real-world algebra toolkit. Brings abstract algebra equations alive with hands-on demonstration.</p>
     </div>
 
-    <!-- Images that appear under every section -->
-   <div style="text-align:center;">
-  <img src="images/invention.jpg" alt="Project Invention" class="always-images">
-  <img src="images/materials.jpg" alt="Materials Used" class="always-images">
-</div>
+    <!-- Images -->
+    <div style="text-align:center;">
+      <img src="images/invention.jpg" alt="Project Invention" class="always-images">
+      <img src="images/materials.jpg" alt="Materials Used" class="always-images">
+    </div>
 
   </main>
 
@@ -252,5 +234,7 @@
   </script>
 </body>
 </html>
+
+
 
 
