@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern Problems, Classical Solutions — Building Height Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Algerian';
+      src: local('Algerian'), local('Algerian-Regular');
+    }
+    :root{
+      --bg:#0a0f1f;
+      --card:#11203a;
+      --muted:#a8b4cc;
+      --accent:#ff79c6;
+      --highlight:#50fa7b;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Inter, sans-serif;
+      background: linear-gradient(135deg,#0a0f1f,#07101a);
+      color:#e6eef8;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      padding:0;
+      margin:0;
+    }
+    header{
+      background: linear-gradient(90deg,#8be9fd,#ff79c6);
+      padding:40px 20px 20px 20px;
+      text-align:center;
+      box-shadow:0 4px 30px rgba(0,0,0,0.6);
+      border-bottom: 2px solid var(--highlight);
+    }
+    h1{
+      font-family:'Algerian', serif;
+      font-size:60px;
+      color:#fff;
+      margin-bottom:10px;
+      text-shadow:2px 2px 12px rgba(0,0,0,0.8);
+      font-weight:bold;
+    }
+    .subtitle{
+      font-family:'Algerian', serif;
+      color:#0f0f0f;
+      font-size:28px;
+      text-shadow:2px 2px 8px rgba(255,255,255,0.4);
+      margin-bottom:8px;
+    }
+    .authors{
+      font-family:'Algerian', serif;
+      color:#222;
+      font-size:22px;
+      margin-top:5px;
+      font-weight:bold;
+    }
+
+    nav{
+      display:flex;
+      justify-content:center;
+      background:#0d1630;
+      gap:20px;
+      padding:16px 0;
+      box-shadow:0 4px 20px rgba(0,0,0,0.5);
+    }
+    nav button{
+      background:none;
+      border:none;
+      color:#e6eef8;
+      font-size:16px;
+      cursor:pointer;
+      transition: all 0.3s;
+      padding:6px 12px;
+      border-radius:8px;
+    }
+    nav button:hover, nav button.active{
+      color:#fff;
+      background:var(--accent);
+      box-shadow:0 0 10px var(--accent);
+      font-weight:700;
+    }
+
+    .page{
+      display:none;
+      max-width:900px;
+      margin:30px auto;
+      padding:30px;
+      background:var(--card);
+      border-radius:14px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.6);
+      border:1px solid rgba(255,255,255,0.05);
+      animation:fadeIn 0.5s ease-in-out;
+      font-family: 'Times New Roman', Times, serif;
+      font-size:24px;
+      color:#f0f0f0;
+    }
+    .page.active{display:block}
+    h2{color:var(--accent);margin-bottom:20px;font-size:36px;text-shadow:1px 1px 4px rgba(0,0,0,0.6)}
+    ul{margin:12px 0 0 20px; color:var(--highlight); font-size:22px}
+    ol{margin:12px 0 0 20px;color:var(--highlight); font-size:22px}
+    pre{background:rgba(255,255,255,0.08);padding:12px;border-radius:8px;color:#fff; font-size:22px}
+    .muted{color:var(--muted)}
+
+    .always-images{
+      max-width:45%;
+      height:auto;
+      margin:20px;
+      border-radius:10px;
+      display:inline-block;
+    }
+
+    @keyframes fadeIn{
+      0%{opacity:0;transform:translateY(10px)}
+      100%{opacity:1;transform:translateY(0)}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Modern Problems, Classical Solutions</h1>
+    <div class="subtitle">Real-World Applications of Algebra & Data Analysis</div>
+    <div class="authors">By: Karthik Rajesh, Ahmed Aasif, Muhammed Jibril</div>
+  </header>
+
+  <nav>
+    <button class="active" onclick="showPage('intro')">Introduction</button>
+    <button onclick="showPage('theory')">Theory</button>
+    <button onclick="showPage('materials')">Materials</button>
+    <button onclick="showPage('procedure')">Procedure</button>
+    <button onclick="showPage('analysis')">Analysis</button>
+    <button onclick="showPage('applications')">Applications</button>
+    <button onclick="showPage('why')">Why This Project Stands Out</button>
+  </nav>
+
+  <main>
+    <div id="intro" class="page active">
+      <h2>Introduction</h2>
+      <p>Algebra is the language of modern problem-solving. This project combines classical trigonometry with modern tools — a clinometer, a laser distance meter, and a calculator — to measure the height of a building. It shows how abstract algebra translates into practical, real-world applications.</p>
+    </div>
+
+    <div id="theory" class="page">
+      <h2>Theory</h2>
+      <p>The project relies on the trigonometric equation:</p>
+      <pre>H = D × tan(θ) + h₀</pre>
+      <p>Where:</p>
+      <ul>
+        <li>H = Height of building</li>
+        <li>D = Distance from observer to base of building (laser)</li>
+        <li>θ = Angle of elevation from eye-level (clinometer)</li>
+        <li>h₀ = Observer’s eye height</li>
+      </ul>
+    </div>
+
+    <div id="materials" class="page">
+      <h2>Materials Required</h2>
+      <ul>
+        <li>Casio calculator</li>
+        <li>Clinometer</li>
+        <li>Sorandy laser distance meter</li>
+        <li>Thermosticker (temperature reference)</li>
+        <li>Paper & pen</li>
+      </ul>
+    </div>
+
+    <div id="procedure" class="page">
+      <h2>Procedure</h2>
+      <ol>
+        <li>Use the laser to measure distance D from observer to the building base.</li>
+        <li>Point the clinometer to the top of the building to get angle θ.</li>
+        <li>Record observer’s eye height h₀.</li>
+        <li>Enter values into the equation: H = D × tan(θ) + h₀</li>
+        <li>Verify against known dimensions or repeat for accuracy.</li>
+      </ol>
+    </div>
+
+    <div id="analysis" class="page">
+      <h2>Analysis</h2>
+      <p><strong>Mathematical Application:</strong> A single algebraic equation solves a real-world challenge.</p>
+      <p><strong>Example:</strong> If D = 30 m, θ = 45°, h₀ = 1.5 m → H = 30 × tan(45°) + 1.5 = 31.5 m</p>
+      <p><strong>Broader Analysis:</strong> Works not only for buildings but also for trees, towers, monuments, or inaccessible objects. Errors can arise from incorrect angle measurement, laser reflection, or rounding.</p>
+    </div>
+
+    <div id="applications" class="page">
+      <h2>Applications</h2>
+      <ul>
+        <li>Civil Engineering & Architecture</li>
+        <li>Forestry</li>
+        <li>Defense & Navigation</li>
+        <li>Disaster Management</li>
+        <li>Education</li>
+      </ul>
+    </div>
+
+    <div id="why" class="page">
+      <h2>Why This Project Stands Out</h2>
+      <p>Merges traditional trigonometry with modern technology. Portable, low-cost, and practical compared to industrial survey equipment. Integrates tools into a compact real-world algebra toolkit. Brings abstract algebra equations alive with hands-on demonstration.</p>
+    </div>
+
+    <!-- Images that appear under every section -->
+    <div style="max-width:900px; margin:20px auto; text-align:center;">
+      <img src="invention.jpg" alt="Project Invention" class="always-images">
+      <img src="materials.jpg" alt="Materials Used" class="always-images">
+    </div>
+
+  </main>
+
+  <script>
+    function showPage(id){
+      document.querySelectorAll('nav button').forEach(btn=>btn.classList.remove('active'));
+      document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
